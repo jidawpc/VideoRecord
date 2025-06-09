@@ -162,7 +162,15 @@ extension ViewController: UIImagePickerControllerDelegate, UINavigationControlle
             presenter.handleRecordFailure(error: NSError(domain: "VideoRecording", code: -1, userInfo: nil))
             return
         }
-        self.presenter.handleVideoReocrd(url: videoURL)
+        do {
+            // make sure the recording video has been reachable
+            let _ = try videoURL.checkResourceIsReachable()
+            DispatchQueue.main.asyncAfter(deadline: .now() + 0.5) {
+                self.presenter.handleVideoReocrd(url: videoURL)
+            }
+        } catch let error {
+            presenter.handleRecordFailure(error: error)
+        }
     }
 }
 
