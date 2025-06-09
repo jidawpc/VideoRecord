@@ -13,6 +13,7 @@ This is a native iOS demo app showcasing communication between a web app embedde
 - With unit tests and UI test support
 - Support portraint, landscapde oritentions
 - Microphone & camera permission detection with user-friendly alerts
+- Camera access is a must for recording, if denied, will friendly bounce out persmission setting alert
 
 
 ## How to Run
