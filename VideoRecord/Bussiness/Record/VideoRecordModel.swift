@@ -8,13 +8,6 @@
 import Foundation
 import AVFoundation
 
-protocol VideoRecordModelProtocol {
-    
-    func checkCameraPermission(completion: @escaping (Bool) -> ())
-    func checkMicrophonePermission(completion: @escaping (Bool) -> ())
-    func requestCameraPermission(completion: @escaping (Bool) -> ())
-}
-
 class VideoRecordModel: VideoRecordModelProtocol {
     
     func checkCameraPermission(completion: @escaping (Bool) -> ()) {

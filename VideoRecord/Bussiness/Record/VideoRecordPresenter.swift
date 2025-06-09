@@ -7,13 +7,6 @@
 
 import Foundation
 
-protocol VideoRecordPresenterProtocol {
-    
-    func handleStartRecordMessage()
-    func handleVideoReocrd(url: URL)
-    func handleRecordFailure(error: Error)
-}
-
 class VideoRecordPresenter: VideoRecordPresenterProtocol {
     
     weak var view: VideoRecordViewProtocol?

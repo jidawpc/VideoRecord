@@ -10,27 +10,119 @@ import XCTest
 
 final class VideoRecordTests: XCTestCase {
 
-    override func setUpWithError() throws {
-        // Put setup code here. This method is called before the invocation of each test method in the class.
+    var mockView: MockVideoRecordView!
+    var mockModel: MockVideoRecordModel!
+    var presenter: VideoRecordPresenterProtocol!
+
+    override func setUp() {
+        super.setUp()
+        mockView = MockVideoRecordView()
+        mockModel = MockVideoRecordModel()
+        presenter = VideoRecordPresenter(view: mockView, model: mockModel)
     }
 
-    override func tearDownWithError() throws {
-        // Put teardown code here. This method is called after the invocation of each test method in the class.
+    override func tearDown() {
+        mockView = nil
+        mockModel = nil
+        presenter = nil
     }
 
-    func testExample() throws {
-        // This is an example of a functional test case.
-        // Use XCTAssert and related functions to verify your tests produce the correct results.
-        // Any test you write for XCTest can be annotated as throws and async.
-        // Mark your test throws to produce an unexpected failure when your test encounters an uncaught error.
-        // Mark your test async to allow awaiting for asynchronous code to complete. Check the results with assertions afterwards.
+    func testHandleStartRecordingWithGrantedPermission() {
+        mockModel.cameraPermissionGranted = true
+        mockModel.microphonePermissionGranted = true
+
+        presenter.handleStartRecordMessage()
+
+        XCTAssertTrue(mockModel.checkCameraPermissionCalled)
+        XCTAssertTrue(mockModel.checkMicrophonePermissionCalled)
     }
 
-    func testPerformanceExample() throws {
-        // This is an example of a performance test case.
-        self.measure {
-            // Put the code you want to measure the time of here.
-        }
+    func testHandleStartRecordingWithDeniedPermission() {
+        mockModel.cameraPermissionGranted = false
+
+        presenter.handleStartRecordMessage()
+
+        XCTAssertTrue(mockModel.checkCameraPermissionCalled)
+        XCTAssertTrue(mockModel.requestCameraPermissionCalled)
     }
 
+    func testHandleVideoRecorded() {
+        let testURL = URL(fileURLWithPath: "test.mp4")
+        presenter.handleVideoReocrd(url: testURL)
+        XCTAssertTrue(mockView.playVideoCalled)
+        XCTAssertEqual(mockView.playedVideoURL, testURL)
+    }
+
+    func testHandleRecordingFailed() {
+        let testError = NSError(domain: "Test", code: 0, userInfo: nil)
+        presenter.handleRecordFailure(error: testError)
+        XCTAssertTrue(mockView.showErrorCalled)
+    }
+}
+
+// MARK: Mock Classes
+
+class MockVideoRecordView: VideoRecordViewProtocol {
+
+    var showLoadingCalled = false
+    var hideLoadingCalled = false
+    var showErrorCalled = false
+    var showTipsCalled = false
+    var showPermissionDeniedAlertCalled = false
+    var presentCameraCalled = false
+    var playVideoCalled = false
+    var playedVideoURL: URL?
+
+    func showLoading() {
+        showLoadingCalled = true
+    }
+
+    func hideLoading() {
+        hideLoadingCalled = true
+    }
+
+    func showError(message: String) {
+        showErrorCalled = true
+    }
+
+    func showTips(message: String) {
+        showTipsCalled = true
+    }
+
+    func showPermissionDeniedAlert() {
+        showPermissionDeniedAlertCalled = true
+    }
+
+    func presentCamera() {
+        presentCameraCalled = true
+    }
+
+    func playVideo(with url: URL) {
+        playVideoCalled = true
+        playedVideoURL = url
+    }
+}
+
+class MockVideoRecordModel: VideoRecordModelProtocol {
+
+    var cameraPermissionGranted = false
+    var microphonePermissionGranted = false
+    var checkCameraPermissionCalled = false
+    var checkMicrophonePermissionCalled = false
+    var requestCameraPermissionCalled = false
+
+    func checkCameraPermission(completion: @escaping (Bool) -> ()) {
+        checkCameraPermissionCalled = true
+        completion(cameraPermissionGranted)
+    }
+
+    func checkMicrophonePermission(completion: @escaping (Bool) -> ()) {
+        checkMicrophonePermissionCalled = true
+        completion(microphonePermissionGranted)
+    }
+
+    func requestCameraPermission(completion: @escaping (Bool) -> ()) {
+        requestCameraPermissionCalled = true
+        completion(cameraPermissionGranted)
+    }
 }

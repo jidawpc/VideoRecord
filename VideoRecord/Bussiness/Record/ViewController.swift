@@ -8,17 +8,6 @@
 import UIKit
 import WebKit
 
-protocol VideoRecordViewProtocol: AnyObject {
-    
-    func showLoading()
-    func hideLoading()
-    func showError(message: String)
-    func showTips(message: String)
-    func showPermissionDeniedAlert()
-    func presentCamera()
-    func playVideo(with url: URL)
-}
-
 class ViewController: UIViewController {
     
     private var presenter: VideoRecordPresenterProtocol!

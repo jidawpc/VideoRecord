@@ -13,24 +13,25 @@
 		BEFB748E2DF6FDE600FD84D1 /* Base in Resources */ = {isa = PBXBuildFile; fileRef = BEFB748D2DF6FDE600FD84D1 /* Base */; };
 		BEFB74902DF6FDE700FD84D1 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = BEFB748F2DF6FDE700FD84D1 /* Assets.xcassets */; };
 		BEFB74932DF6FDE700FD84D1 /* Base in Resources */ = {isa = PBXBuildFile; fileRef = BEFB74922DF6FDE700FD84D1 /* Base */; };
-		BEFB749E2DF6FDE700FD84D1 /* VideoRecordTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = BEFB749D2DF6FDE700FD84D1 /* VideoRecordTests.swift */; };
 		BEFB74A82DF6FDE700FD84D1 /* VideoRecordUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = BEFB74A72DF6FDE700FD84D1 /* VideoRecordUITests.swift */; };
 		BEFB74AA2DF6FDE700FD84D1 /* VideoRecordUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = BEFB74A92DF6FDE700FD84D1 /* VideoRecordUITestsLaunchTests.swift */; };
 		BEFB74B92DF700AB00FD84D1 /* VideoRecordModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = BEFB74B82DF700AB00FD84D1 /* VideoRecordModel.swift */; };
 		BEFB74BB2DF700D100FD84D1 /* VideoRecordPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = BEFB74BA2DF700D100FD84D1 /* VideoRecordPresenter.swift */; };
 		BEFB74BF2DF7021000FD84D1 /* Web in Resources */ = {isa = PBXBuildFile; fileRef = BEFB74BE2DF7021000FD84D1 /* Web */; };
 		BEFB74C12DF70FED00FD84D1 /* VideoRecordRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = BEFB74C02DF70FED00FD84D1 /* VideoRecordRouter.swift */; };
+		BEFB74C52DF71B3500FD84D1 /* VideoRecordProtocols.swift in Sources */ = {isa = PBXBuildFile; fileRef = BEFB74C42DF71B3500FD84D1 /* VideoRecordProtocols.swift */; };
+		BEFB74CF2DF71D3300FD84D1 /* VideoRecordTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = BEFB74CE2DF71D3300FD84D1 /* VideoRecordTests.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
-		BEFB749A2DF6FDE700FD84D1 /* PBXContainerItemProxy */ = {
+		BEFB74A42DF6FDE700FD84D1 /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
 			containerPortal = BEFB747B2DF6FDE600FD84D1 /* Project object */;
 			proxyType = 1;
 			remoteGlobalIDString = BEFB74822DF6FDE600FD84D1;
 			remoteInfo = VideoRecord;
 		};
-		BEFB74A42DF6FDE700FD84D1 /* PBXContainerItemProxy */ = {
+		BEFB74D02DF71D3300FD84D1 /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
 			containerPortal = BEFB747B2DF6FDE600FD84D1 /* Project object */;
 			proxyType = 1;
@@ -48,8 +49,6 @@
 		BEFB748F2DF6FDE700FD84D1 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		BEFB74922DF6FDE700FD84D1 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		BEFB74942DF6FDE700FD84D1 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		BEFB74992DF6FDE700FD84D1 /* VideoRecordTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = VideoRecordTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
-		BEFB749D2DF6FDE700FD84D1 /* VideoRecordTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VideoRecordTests.swift; sourceTree = "<group>"; };
 		BEFB74A32DF6FDE700FD84D1 /* VideoRecordUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = VideoRecordUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		BEFB74A72DF6FDE700FD84D1 /* VideoRecordUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VideoRecordUITests.swift; sourceTree = "<group>"; };
 		BEFB74A92DF6FDE700FD84D1 /* VideoRecordUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VideoRecordUITestsLaunchTests.swift; sourceTree = "<group>"; };
@@ -57,17 +56,13 @@
 		BEFB74BA2DF700D100FD84D1 /* VideoRecordPresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VideoRecordPresenter.swift; sourceTree = "<group>"; };
 		BEFB74BE2DF7021000FD84D1 /* Web */ = {isa = PBXFileReference; lastKnownFileType = folder; path = Web; sourceTree = "<group>"; };
 		BEFB74C02DF70FED00FD84D1 /* VideoRecordRouter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VideoRecordRouter.swift; sourceTree = "<group>"; };
+		BEFB74C42DF71B3500FD84D1 /* VideoRecordProtocols.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VideoRecordProtocols.swift; sourceTree = "<group>"; };
+		BEFB74CC2DF71D3300FD84D1 /* VideoRecordTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = VideoRecordTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		BEFB74CE2DF71D3300FD84D1 /* VideoRecordTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VideoRecordTests.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
 		BEFB74802DF6FDE600FD84D1 /* Frameworks */ = {
-			isa = PBXFrameworksBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
-		BEFB74962DF6FDE700FD84D1 /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -81,6 +76,13 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
+		BEFB74C92DF71D3300FD84D1 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
@@ -88,8 +90,8 @@
 			isa = PBXGroup;
 			children = (
 				BEFB74852DF6FDE600FD84D1 /* VideoRecord */,
-				BEFB749C2DF6FDE700FD84D1 /* VideoRecordTests */,
 				BEFB74A62DF6FDE700FD84D1 /* VideoRecordUITests */,
+				BEFB74CD2DF71D3300FD84D1 /* VideoRecordTests */,
 				BEFB74842DF6FDE600FD84D1 /* Products */,
 			);
 			sourceTree = "<group>";
@@ -98,8 +100,8 @@
 			isa = PBXGroup;
 			children = (
 				BEFB74832DF6FDE600FD84D1 /* VideoRecord.app */,
-				BEFB74992DF6FDE700FD84D1 /* VideoRecordTests.xctest */,
 				BEFB74A32DF6FDE700FD84D1 /* VideoRecordUITests.xctest */,
+				BEFB74CC2DF71D3300FD84D1 /* VideoRecordTests.xctest */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -117,14 +119,6 @@
 				BEFB74942DF6FDE700FD84D1 /* Info.plist */,
 			);
 			path = VideoRecord;
-			sourceTree = "<group>";
-		};
-		BEFB749C2DF6FDE700FD84D1 /* VideoRecordTests */ = {
-			isa = PBXGroup;
-			children = (
-				BEFB749D2DF6FDE700FD84D1 /* VideoRecordTests.swift */,
-			);
-			path = VideoRecordTests;
 			sourceTree = "<group>";
 		};
 		BEFB74A62DF6FDE700FD84D1 /* VideoRecordUITests */ = {
@@ -151,8 +145,17 @@
 				BEFB74C02DF70FED00FD84D1 /* VideoRecordRouter.swift */,
 				BEFB74B82DF700AB00FD84D1 /* VideoRecordModel.swift */,
 				BEFB74BA2DF700D100FD84D1 /* VideoRecordPresenter.swift */,
+				BEFB74C42DF71B3500FD84D1 /* VideoRecordProtocols.swift */,
 			);
 			path = Record;
+			sourceTree = "<group>";
+		};
+		BEFB74CD2DF71D3300FD84D1 /* VideoRecordTests */ = {
+			isa = PBXGroup;
+			children = (
+				BEFB74CE2DF71D3300FD84D1 /* VideoRecordTests.swift */,
+			);
+			path = VideoRecordTests;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -175,24 +178,6 @@
 			productReference = BEFB74832DF6FDE600FD84D1 /* VideoRecord.app */;
 			productType = "com.apple.product-type.application";
 		};
-		BEFB74982DF6FDE700FD84D1 /* VideoRecordTests */ = {
-			isa = PBXNativeTarget;
-			buildConfigurationList = BEFB74B02DF6FDE700FD84D1 /* Build configuration list for PBXNativeTarget "VideoRecordTests" */;
-			buildPhases = (
-				BEFB74952DF6FDE700FD84D1 /* Sources */,
-				BEFB74962DF6FDE700FD84D1 /* Frameworks */,
-				BEFB74972DF6FDE700FD84D1 /* Resources */,
-			);
-			buildRules = (
-			);
-			dependencies = (
-				BEFB749B2DF6FDE700FD84D1 /* PBXTargetDependency */,
-			);
-			name = VideoRecordTests;
-			productName = VideoRecordTests;
-			productReference = BEFB74992DF6FDE700FD84D1 /* VideoRecordTests.xctest */;
-			productType = "com.apple.product-type.bundle.unit-test";
-		};
 		BEFB74A22DF6FDE700FD84D1 /* VideoRecordUITests */ = {
 			isa = PBXNativeTarget;
 			buildConfigurationList = BEFB74B32DF6FDE700FD84D1 /* Build configuration list for PBXNativeTarget "VideoRecordUITests" */;
@@ -211,6 +196,24 @@
 			productReference = BEFB74A32DF6FDE700FD84D1 /* VideoRecordUITests.xctest */;
 			productType = "com.apple.product-type.bundle.ui-testing";
 		};
+		BEFB74CB2DF71D3300FD84D1 /* VideoRecordTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = BEFB74D22DF71D3300FD84D1 /* Build configuration list for PBXNativeTarget "VideoRecordTests" */;
+			buildPhases = (
+				BEFB74C82DF71D3300FD84D1 /* Sources */,
+				BEFB74C92DF71D3300FD84D1 /* Frameworks */,
+				BEFB74CA2DF71D3300FD84D1 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				BEFB74D12DF71D3300FD84D1 /* PBXTargetDependency */,
+			);
+			name = VideoRecordTests;
+			productName = VideoRecordTests;
+			productReference = BEFB74CC2DF71D3300FD84D1 /* VideoRecordTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
 /* End PBXNativeTarget section */
 
 /* Begin PBXProject section */
@@ -224,11 +227,11 @@
 					BEFB74822DF6FDE600FD84D1 = {
 						CreatedOnToolsVersion = 15.4;
 					};
-					BEFB74982DF6FDE700FD84D1 = {
+					BEFB74A22DF6FDE700FD84D1 = {
 						CreatedOnToolsVersion = 15.4;
 						TestTargetID = BEFB74822DF6FDE600FD84D1;
 					};
-					BEFB74A22DF6FDE700FD84D1 = {
+					BEFB74CB2DF71D3300FD84D1 = {
 						CreatedOnToolsVersion = 15.4;
 						TestTargetID = BEFB74822DF6FDE600FD84D1;
 					};
@@ -248,8 +251,8 @@
 			projectRoot = "";
 			targets = (
 				BEFB74822DF6FDE600FD84D1 /* VideoRecord */,
-				BEFB74982DF6FDE700FD84D1 /* VideoRecordTests */,
 				BEFB74A22DF6FDE700FD84D1 /* VideoRecordUITests */,
+				BEFB74CB2DF71D3300FD84D1 /* VideoRecordTests */,
 			);
 		};
 /* End PBXProject section */
@@ -266,14 +269,14 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		BEFB74972DF6FDE700FD84D1 /* Resources */ = {
+		BEFB74A12DF6FDE700FD84D1 /* Resources */ = {
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		BEFB74A12DF6FDE700FD84D1 /* Resources */ = {
+		BEFB74CA2DF71D3300FD84D1 /* Resources */ = {
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -289,18 +292,11 @@
 			files = (
 				BEFB74B92DF700AB00FD84D1 /* VideoRecordModel.swift in Sources */,
 				BEFB74C12DF70FED00FD84D1 /* VideoRecordRouter.swift in Sources */,
+				BEFB74C52DF71B3500FD84D1 /* VideoRecordProtocols.swift in Sources */,
 				BEFB74BB2DF700D100FD84D1 /* VideoRecordPresenter.swift in Sources */,
 				BEFB748B2DF6FDE600FD84D1 /* ViewController.swift in Sources */,
 				BEFB74872DF6FDE600FD84D1 /* AppDelegate.swift in Sources */,
 				BEFB74892DF6FDE600FD84D1 /* SceneDelegate.swift in Sources */,
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
-		BEFB74952DF6FDE700FD84D1 /* Sources */ = {
-			isa = PBXSourcesBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-				BEFB749E2DF6FDE700FD84D1 /* VideoRecordTests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -313,18 +309,26 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
+		BEFB74C82DF71D3300FD84D1 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				BEFB74CF2DF71D3300FD84D1 /* VideoRecordTests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 /* End PBXSourcesBuildPhase section */
 
 /* Begin PBXTargetDependency section */
-		BEFB749B2DF6FDE700FD84D1 /* PBXTargetDependency */ = {
-			isa = PBXTargetDependency;
-			target = BEFB74822DF6FDE600FD84D1 /* VideoRecord */;
-			targetProxy = BEFB749A2DF6FDE700FD84D1 /* PBXContainerItemProxy */;
-		};
 		BEFB74A52DF6FDE700FD84D1 /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
 			target = BEFB74822DF6FDE600FD84D1 /* VideoRecord */;
 			targetProxy = BEFB74A42DF6FDE700FD84D1 /* PBXContainerItemProxy */;
+		};
+		BEFB74D12DF71D3300FD84D1 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = BEFB74822DF6FDE600FD84D1 /* VideoRecord */;
+			targetProxy = BEFB74D02DF71D3300FD84D1 /* PBXContainerItemProxy */;
 		};
 /* End PBXTargetDependency section */
 
@@ -527,46 +531,6 @@
 			};
 			name = Release;
 		};
-		BEFB74B12DF6FDE700FD84D1 /* Debug */ = {
-			isa = XCBuildConfiguration;
-			buildSettings = {
-				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
-				BUNDLE_LOADER = "$(TEST_HOST)";
-				CODE_SIGN_STYLE = Automatic;
-				CURRENT_PROJECT_VERSION = 1;
-				DEVELOPMENT_TEAM = AR5W2NF8HM;
-				GENERATE_INFOPLIST_FILE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 17.5;
-				MARKETING_VERSION = 1.0;
-				PRODUCT_BUNDLE_IDENTIFIER = wpc.VideoRecordTests;
-				PRODUCT_NAME = "$(TARGET_NAME)";
-				SWIFT_EMIT_LOC_STRINGS = NO;
-				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
-				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/VideoRecord.app/$(BUNDLE_EXECUTABLE_FOLDER_PATH)/VideoRecord";
-			};
-			name = Debug;
-		};
-		BEFB74B22DF6FDE700FD84D1 /* Release */ = {
-			isa = XCBuildConfiguration;
-			buildSettings = {
-				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
-				BUNDLE_LOADER = "$(TEST_HOST)";
-				CODE_SIGN_STYLE = Automatic;
-				CURRENT_PROJECT_VERSION = 1;
-				DEVELOPMENT_TEAM = AR5W2NF8HM;
-				GENERATE_INFOPLIST_FILE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 17.5;
-				MARKETING_VERSION = 1.0;
-				PRODUCT_BUNDLE_IDENTIFIER = wpc.VideoRecordTests;
-				PRODUCT_NAME = "$(TARGET_NAME)";
-				SWIFT_EMIT_LOC_STRINGS = NO;
-				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
-				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/VideoRecord.app/$(BUNDLE_EXECUTABLE_FOLDER_PATH)/VideoRecord";
-			};
-			name = Release;
-		};
 		BEFB74B42DF6FDE700FD84D1 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
@@ -603,6 +567,42 @@
 			};
 			name = Release;
 		};
+		BEFB74D32DF71D3300FD84D1 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = AR5W2NF8HM;
+				GENERATE_INFOPLIST_FILE = YES;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = wpc.VideoRecordTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/VideoRecord.app/$(BUNDLE_EXECUTABLE_FOLDER_PATH)/VideoRecord";
+			};
+			name = Debug;
+		};
+		BEFB74D42DF71D3300FD84D1 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = AR5W2NF8HM;
+				GENERATE_INFOPLIST_FILE = YES;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = wpc.VideoRecordTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/VideoRecord.app/$(BUNDLE_EXECUTABLE_FOLDER_PATH)/VideoRecord";
+			};
+			name = Release;
+		};
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
@@ -624,20 +624,20 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		BEFB74B02DF6FDE700FD84D1 /* Build configuration list for PBXNativeTarget "VideoRecordTests" */ = {
-			isa = XCConfigurationList;
-			buildConfigurations = (
-				BEFB74B12DF6FDE700FD84D1 /* Debug */,
-				BEFB74B22DF6FDE700FD84D1 /* Release */,
-			);
-			defaultConfigurationIsVisible = 0;
-			defaultConfigurationName = Release;
-		};
 		BEFB74B32DF6FDE700FD84D1 /* Build configuration list for PBXNativeTarget "VideoRecordUITests" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				BEFB74B42DF6FDE700FD84D1 /* Debug */,
 				BEFB74B52DF6FDE700FD84D1 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		BEFB74D22DF71D3300FD84D1 /* Build configuration list for PBXNativeTarget "VideoRecordTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				BEFB74D32DF71D3300FD84D1 /* Debug */,
+				BEFB74D42DF71D3300FD84D1 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
