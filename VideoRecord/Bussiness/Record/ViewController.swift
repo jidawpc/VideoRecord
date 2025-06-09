@@ -53,6 +53,8 @@ class ViewController: UIViewController {
         view.addSubview(loadingIndicator)
     }
     
+    // MARK: orientation support
+    
     override var supportedInterfaceOrientations: UIInterfaceOrientationMask {
         return [.portrait, .landscapeLeft, .landscapeRight]
     }
@@ -145,6 +147,7 @@ extension ViewController: WKNavigationDelegate {
 // MARK: UIImagePickerControllerDelegate && UINavigationControllerDelegate
 extension ViewController: UIImagePickerControllerDelegate, UINavigationControllerDelegate {
     
+    // when click done in picker controller and turns back to VC.
     func imagePickerController(_ picker: UIImagePickerController, didFinishPickingMediaWithInfo info: [UIImagePickerController.InfoKey : Any]) {
         picker.dismiss(animated: true)
         guard let videoURL = info[.mediaURL] as? URL else {

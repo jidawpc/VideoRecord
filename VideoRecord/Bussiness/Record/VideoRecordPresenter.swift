@@ -18,6 +18,7 @@ class VideoRecordPresenter: VideoRecordPresenterProtocol {
     }
     
     func handleStartRecordMessage() {
+        // Camera is a must for video record, if it is diabled, use error tips(red color) to give tips to user, and when click it again, bounce out alert to jump to Settings
         model.checkCameraPermission { [weak self] granted in
             guard let self = self else { return }
             if granted {
@@ -48,6 +49,7 @@ class VideoRecordPresenter: VideoRecordPresenterProtocol {
 
 extension VideoRecordPresenter {
     
+    // Microphone is not a must, but if denied, the video would be muted, so use tips to tell user where to enable it if it is disabled.
     private func checkMicrophoneAndPresentCamera() {
         model.checkMicrophonePermission { [weak self] granted in
             DispatchQueue.main.async {

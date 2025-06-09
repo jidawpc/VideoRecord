@@ -22,6 +22,7 @@ class VideoRecordRouter: VideoRecordRouterProtocol {
         self.viewController = viewController
     }
     
+    // open camera
     func presentCamera(delegate: any UIImagePickerControllerDelegate & UINavigationControllerDelegate) {
         let picker = UIImagePickerController()
         picker.sourceType = .camera
@@ -31,6 +32,7 @@ class VideoRecordRouter: VideoRecordRouterProtocol {
         viewController?.present(picker, animated: true)
     }
     
+    // jump to iphone Settings
     func openAppSettings() {
         if let appSettingsURL = URL(string: UIApplication.openSettingsURLString), UIApplication.shared.canOpenURL(appSettingsURL) {
             UIApplication.shared.open(appSettingsURL)
