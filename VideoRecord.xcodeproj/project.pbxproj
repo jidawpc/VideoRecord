@@ -16,6 +16,9 @@
 		BEFB749E2DF6FDE700FD84D1 /* VideoRecordTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = BEFB749D2DF6FDE700FD84D1 /* VideoRecordTests.swift */; };
 		BEFB74A82DF6FDE700FD84D1 /* VideoRecordUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = BEFB74A72DF6FDE700FD84D1 /* VideoRecordUITests.swift */; };
 		BEFB74AA2DF6FDE700FD84D1 /* VideoRecordUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = BEFB74A92DF6FDE700FD84D1 /* VideoRecordUITestsLaunchTests.swift */; };
+		BEFB74B92DF700AB00FD84D1 /* VideoRecordModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = BEFB74B82DF700AB00FD84D1 /* VideoRecordModel.swift */; };
+		BEFB74BB2DF700D100FD84D1 /* VideoRecordPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = BEFB74BA2DF700D100FD84D1 /* VideoRecordPresenter.swift */; };
+		BEFB74BF2DF7021000FD84D1 /* Web in Resources */ = {isa = PBXBuildFile; fileRef = BEFB74BE2DF7021000FD84D1 /* Web */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -49,6 +52,9 @@
 		BEFB74A32DF6FDE700FD84D1 /* VideoRecordUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = VideoRecordUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		BEFB74A72DF6FDE700FD84D1 /* VideoRecordUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VideoRecordUITests.swift; sourceTree = "<group>"; };
 		BEFB74A92DF6FDE700FD84D1 /* VideoRecordUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VideoRecordUITestsLaunchTests.swift; sourceTree = "<group>"; };
+		BEFB74B82DF700AB00FD84D1 /* VideoRecordModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VideoRecordModel.swift; sourceTree = "<group>"; };
+		BEFB74BA2DF700D100FD84D1 /* VideoRecordPresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VideoRecordPresenter.swift; sourceTree = "<group>"; };
+		BEFB74BE2DF7021000FD84D1 /* Web */ = {isa = PBXFileReference; lastKnownFileType = folder; path = Web; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -99,9 +105,10 @@
 		BEFB74852DF6FDE600FD84D1 /* VideoRecord */ = {
 			isa = PBXGroup;
 			children = (
+				BEFB74BE2DF7021000FD84D1 /* Web */,
+				BEFB74B62DF7000000FD84D1 /* Bussiness */,
 				BEFB74862DF6FDE600FD84D1 /* AppDelegate.swift */,
 				BEFB74882DF6FDE600FD84D1 /* SceneDelegate.swift */,
-				BEFB748A2DF6FDE600FD84D1 /* ViewController.swift */,
 				BEFB748C2DF6FDE600FD84D1 /* Main.storyboard */,
 				BEFB748F2DF6FDE700FD84D1 /* Assets.xcassets */,
 				BEFB74912DF6FDE700FD84D1 /* LaunchScreen.storyboard */,
@@ -125,6 +132,24 @@
 				BEFB74A92DF6FDE700FD84D1 /* VideoRecordUITestsLaunchTests.swift */,
 			);
 			path = VideoRecordUITests;
+			sourceTree = "<group>";
+		};
+		BEFB74B62DF7000000FD84D1 /* Bussiness */ = {
+			isa = PBXGroup;
+			children = (
+				BEFB74B72DF7002D00FD84D1 /* Record */,
+			);
+			path = Bussiness;
+			sourceTree = "<group>";
+		};
+		BEFB74B72DF7002D00FD84D1 /* Record */ = {
+			isa = PBXGroup;
+			children = (
+				BEFB748A2DF6FDE600FD84D1 /* ViewController.swift */,
+				BEFB74B82DF700AB00FD84D1 /* VideoRecordModel.swift */,
+				BEFB74BA2DF700D100FD84D1 /* VideoRecordPresenter.swift */,
+			);
+			path = Record;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -232,6 +257,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				BEFB74902DF6FDE700FD84D1 /* Assets.xcassets in Resources */,
+				BEFB74BF2DF7021000FD84D1 /* Web in Resources */,
 				BEFB74932DF6FDE700FD84D1 /* Base in Resources */,
 				BEFB748E2DF6FDE600FD84D1 /* Base in Resources */,
 			);
@@ -258,6 +284,8 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				BEFB74B92DF700AB00FD84D1 /* VideoRecordModel.swift in Sources */,
+				BEFB74BB2DF700D100FD84D1 /* VideoRecordPresenter.swift in Sources */,
 				BEFB748B2DF6FDE600FD84D1 /* ViewController.swift in Sources */,
 				BEFB74872DF6FDE600FD84D1 /* AppDelegate.swift in Sources */,
 				BEFB74892DF6FDE600FD84D1 /* SceneDelegate.swift in Sources */,
@@ -445,6 +473,8 @@
 				DEVELOPMENT_TEAM = AR5W2NF8HM;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = VideoRecord/Info.plist;
+				INFOPLIST_KEY_NSCameraUsageDescription = "This app needs access to the camera to allow video recording from the web interface.";
+				INFOPLIST_KEY_NSMicrophoneUsageDescription = "This app needs access to the microphone for video recording.";
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
 				INFOPLIST_KEY_UIMainStoryboardFile = Main;
@@ -473,6 +503,8 @@
 				DEVELOPMENT_TEAM = AR5W2NF8HM;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = VideoRecord/Info.plist;
+				INFOPLIST_KEY_NSCameraUsageDescription = "This app needs access to the camera to allow video recording from the web interface.";
+				INFOPLIST_KEY_NSMicrophoneUsageDescription = "This app needs access to the microphone for video recording.";
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
 				INFOPLIST_KEY_UIMainStoryboardFile = Main;
