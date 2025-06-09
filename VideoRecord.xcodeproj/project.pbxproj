@@ -19,6 +19,7 @@
 		BEFB74B92DF700AB00FD84D1 /* VideoRecordModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = BEFB74B82DF700AB00FD84D1 /* VideoRecordModel.swift */; };
 		BEFB74BB2DF700D100FD84D1 /* VideoRecordPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = BEFB74BA2DF700D100FD84D1 /* VideoRecordPresenter.swift */; };
 		BEFB74BF2DF7021000FD84D1 /* Web in Resources */ = {isa = PBXBuildFile; fileRef = BEFB74BE2DF7021000FD84D1 /* Web */; };
+		BEFB74C12DF70FED00FD84D1 /* VideoRecordRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = BEFB74C02DF70FED00FD84D1 /* VideoRecordRouter.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -55,6 +56,7 @@
 		BEFB74B82DF700AB00FD84D1 /* VideoRecordModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VideoRecordModel.swift; sourceTree = "<group>"; };
 		BEFB74BA2DF700D100FD84D1 /* VideoRecordPresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VideoRecordPresenter.swift; sourceTree = "<group>"; };
 		BEFB74BE2DF7021000FD84D1 /* Web */ = {isa = PBXFileReference; lastKnownFileType = folder; path = Web; sourceTree = "<group>"; };
+		BEFB74C02DF70FED00FD84D1 /* VideoRecordRouter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VideoRecordRouter.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -146,6 +148,7 @@
 			isa = PBXGroup;
 			children = (
 				BEFB748A2DF6FDE600FD84D1 /* ViewController.swift */,
+				BEFB74C02DF70FED00FD84D1 /* VideoRecordRouter.swift */,
 				BEFB74B82DF700AB00FD84D1 /* VideoRecordModel.swift */,
 				BEFB74BA2DF700D100FD84D1 /* VideoRecordPresenter.swift */,
 			);
@@ -285,6 +288,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				BEFB74B92DF700AB00FD84D1 /* VideoRecordModel.swift in Sources */,
+				BEFB74C12DF70FED00FD84D1 /* VideoRecordRouter.swift in Sources */,
 				BEFB74BB2DF700D100FD84D1 /* VideoRecordPresenter.swift in Sources */,
 				BEFB748B2DF6FDE600FD84D1 /* ViewController.swift in Sources */,
 				BEFB74872DF6FDE600FD84D1 /* AppDelegate.swift in Sources */,

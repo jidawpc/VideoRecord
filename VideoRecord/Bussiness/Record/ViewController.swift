@@ -7,7 +7,6 @@
 
 import UIKit
 import WebKit
-import UniformTypeIdentifiers
 
 protocol VideoRecordViewProtocol: AnyObject {
     
@@ -23,6 +22,7 @@ protocol VideoRecordViewProtocol: AnyObject {
 class ViewController: UIViewController {
     
     private var presenter: VideoRecordPresenterProtocol!
+    private var router: VideoRecordRouterProtocol!
     
     // subviews
     private var webView: WKWebView!
@@ -35,6 +35,7 @@ class ViewController: UIViewController {
         
         let model = VideoRecordModel()
         presenter = VideoRecordPresenter(view: self, model: model)
+        router = VideoRecordRouter(viewController: self)
     }
     
     private func setupUI() {
@@ -111,12 +112,7 @@ extension ViewController: VideoRecordViewProtocol {
     }
     
     func presentCamera() {
-        let picker = UIImagePickerController()
-        picker.sourceType = .camera
-        picker.mediaTypes = [UTType.movie.identifier]
-        picker.videoQuality = .typeMedium
-        picker.delegate = self
-        self.present(picker, animated: true)
+        router.presentCamera(delegate: self)
     }
     
     func showPermissionDeniedAlert() {
@@ -127,9 +123,7 @@ extension ViewController: VideoRecordViewProtocol {
         )
         alert.addAction(UIAlertAction(title: "Cancel", style: .cancel))
         alert.addAction(UIAlertAction(title: "Open Settings", style: .default, handler: { [weak self] _ in
-            if let appSettingsURL = URL(string: UIApplication.openSettingsURLString), UIApplication.shared.canOpenURL(appSettingsURL) {
-                UIApplication.shared.open(appSettingsURL)
-            }
+            self?.router.openAppSettings()
         }))
         present(alert, animated: true)
     }
